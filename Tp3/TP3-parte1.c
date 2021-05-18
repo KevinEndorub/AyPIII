@@ -31,7 +31,10 @@ nodo *agregar_nodo(nodo *lista, int numero){
         while(aux->siguiente_nodo != NULL){
             aux = aux->siguiente_nodo;
         }
+
         aux ->siguiente_nodo = nuevo_nodo;
+
+        
     }
     return lista;
 }
@@ -105,7 +108,7 @@ void mostrar_lista(nodo *lista){
     nodo *auxiliar = malloc(sizeof(nodo));
     auxiliar= lista;
     while (auxiliar != NULL){
-            printf("%d\n", auxiliar->num);
+            printf("%d \n", auxiliar->num);
             auxiliar = auxiliar->siguiente_nodo;
     }
 }
