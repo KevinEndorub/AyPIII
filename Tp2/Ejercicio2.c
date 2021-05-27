@@ -1,0 +1,42 @@
+ #include <stdio.h>
+
+#include <conio.h> 
+
+typedef struct Perros  {
+    char *nombre;
+    char *raza;
+    float edad;
+    }Perros;
+
+Perros set_edad(Perros perro, float edad);
+Perros set_nombre_y_raza(Perros perro, char *nombre, char *raza);
+
+
+int main(){
+    Perros perro_1;
+    perro_1 = set_edad(perro_1,20);
+    perro_1 = set_nombre_y_raza(perro_1,"Juan","tonto");
+    
+
+    printf("edad: %f  nombre: %s    raza:  %s", perro_1.edad,perro_1.nombre,perro_1.raza);
+    return 0;
+};
+Perros set_edad(Perros perro, float edad){
+
+    perro.edad = edad;
+    return perro;
+ 
+};
+
+Perros set_nombre_y_raza(Perros perro,char *nombre, char *raza){
+
+    perro.nombre = nombre;
+    perro.raza = raza;
+    return perro;
+}
+
+/* No puedo cambiar las variables de mi estructura  mediante parametros, porque al ingresar por parametros los char ,lo que se guarda es el puntero a lo que escribi y no las palabras en si.
+Por lo que tuve muchos problemas para hacer que pueda pasar por paramatro los lugares en donde estan alojados las palabras, ya que siempre salta un error de compatibilidad , que no es array.
+Solo pasa con los char, porque son arrays de punteros.  
+s
+s*/
