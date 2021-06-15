@@ -21,8 +21,8 @@ void mostrar_lista(nodo *lista){
     }
 }
 nodo *agregar_nodo_ordenadamente(nodo *lista, int numero){
-    nodo *aux= malloc(sizeof(nodo));
-    nodo *aux2= malloc(sizeof(nodo));
+    nodo *aux;
+    nodo *aux2;
     nodo *nuevo_nodo = malloc(sizeof(nodo));
     nuevo_nodo -> num = numero;
     nuevo_nodo -> siguiente_nodo = NULL;
