@@ -1,0 +1,1 @@
+scanf("%s",nombre_aux);
